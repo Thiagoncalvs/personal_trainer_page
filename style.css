@@ -1,3 +1,5 @@
+@font-face {font-family: "HansomFYW01-Bold"; src: url("//db.onlinewebfonts.com/t/ce857f6c437ac98353de7b4175916a1c.eot"); src: url("//db.onlinewebfonts.com/t/ce857f6c437ac98353de7b4175916a1c.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/ce857f6c437ac98353de7b4175916a1c.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/ce857f6c437ac98353de7b4175916a1c.woff") format("woff"), url("//db.onlinewebfonts.com/t/ce857f6c437ac98353de7b4175916a1c.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/ce857f6c437ac98353de7b4175916a1c.svg#HansomFYW01-Bold") format("svg"); } 
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 *{
@@ -9,10 +11,8 @@
     font-size: 12pt;
     color: white;
     border: none;
-}
-
-h1{
-    font-size: 18pt;
+    font-family: "HansomFYW01-Bold";
+    font-style: italic;
 }
 
 body{
@@ -32,7 +32,7 @@ body{
         grid-template-columns: 100% 100%;
         grid-template-rows: 100%;
 
-        overflow: auto;
+        overflow: hidden;
 
         position: relative;
     }
@@ -40,11 +40,13 @@ body{
             height: 0;
         }
         .EstruturaGeral .Logo{
+            /* background: green; */
             position: fixed;
             top: 0;
             left: 0;
 
             display: flex;
+            flex-direction: row;
             justify-content: center;
             align-items: center;
 
@@ -52,9 +54,41 @@ body{
             height: 15%;
 
             color: #FFFFF0;
-
-            opacity: 0.8;
         }
+            .EstruturaGeral .Logo h1{
+                font-size: 23pt;
+            }
+            .EstruturaGeral .Logo p{
+                font-size: 8.5pt;
+                letter-spacing: 2px;
+            }
+        .EstruturaGeral .Logo .LogoMain{
+            position: relative;
+            top: 0;
+            left: 0;
+            /* background: #ff000059; */
+            width:73px;
+            height: 100%;
+        }
+            .EstruturaGeral .Logo .LogoMain p#p1{
+                position: absolute;
+                top: 10%;
+                right: 22px;
+
+                font-size: 50pt;
+                font-style: normal;
+                transform: rotate(-45deg);
+            }
+            .EstruturaGeral .Logo .LogoMain p#p2{
+                position: absolute;
+                top: 10%;
+                right: 10px;
+
+                font-size: 50pt;
+                font-style: normal;
+                transform: rotateY(-180deg)
+                rotate(-45deg);
+            }
         .EstruturaGeral .ButtonScroll{
             background: none;
 
@@ -79,12 +113,12 @@ body{
                 .EstruturaGeral .ButtonScroll button .bi{
                     font-size: 30pt;
                     color: #FFFFF0;
-                    opacity: 0.5;
+                    /* opacity: 0.5; */
                 }
 /* ///////////////////////////////////////////////////////////// */
 
         .EstruturaGeral .PageOne{
-            background: linear-gradient(180deg, rgba(25, 25, 112, 0.9), rgba(72, 61, 139, 0.9));
+            background: linear-gradient(180deg, #191970e6, rgba(40, 29, 116, 0.7));
             width: 100%;
             height: 100%;
 
@@ -113,7 +147,7 @@ body{
 /* ////////////////////////////////////////////////////////////////// */
 
         .EstruturaGeral .PageTwo{
-            background: linear-gradient(180deg, rgba(255, 140, 0, 0.9), rgba(255, 165, 0, 0.9));
+            background: linear-gradient(180deg, rgba(255, 140, 0, 0.9), rgba(255, 165, 0, 0.7));
             width: 100%;
             height: 100%;
 
