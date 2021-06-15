@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    /* outline: 1px dashed red; */
+    font-family: 'Roboto', sans-serif;
+    font-size: 12pt;
+    color: white;
+    border: none;
+}
+
+h1{
+    font-size: 18pt;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+
+    overflow: hidden;
+}
+    .EstruturaGeral{
+        background-image: url(./IMG/45626725_923455577845397_1016915101482336273_n.jpg);
+        background-position: center;
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+
+        display: grid;
+        grid-template-columns: 100% 100%;
+        grid-template-rows: 100%;
+
+        overflow: auto;
+
+        position: relative;
+    }
+        .EstruturaGeral::-webkit-scrollbar{
+            height: 0;
+        }
+        .EstruturaGeral .Logo{
+            position: fixed;
+            top: 0;
+            left: 0;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            width: 100%;
+            height: 15%;
+
+            color: #FFFFF0;
+
+            opacity: 0.8;
+        }
+        .EstruturaGeral .ButtonScroll{
+            background: none;
+
+            width: 100%;
+            height: 10%;
+            
+            position: fixed;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+            .EstruturaGeral .ButtonScroll button{
+                background: none;
+
+                width: 100%;
+                height: 100%;
+            }
+                .EstruturaGeral .ButtonScroll button .bi{
+                    font-size: 30pt;
+                    color: #FFFFF0;
+                    opacity: 0.5;
+                }
+/* ///////////////////////////////////////////////////////////// */
+
+        .EstruturaGeral .PageOne{
+            background: linear-gradient(180deg, rgba(25, 25, 112, 0.9), rgba(72, 61, 139, 0.9));
+            width: 100%;
+            height: 100%;
+
+            grid-column: 1;
+        }
+                .EstruturaGeral .PageOne .RedesSociais{
+                    background: rgba(72, 61, 139, 0.5);
+                    border-radius: 10px;
+
+                    width: 95%;
+                    height: 15%;
+
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+
+                    position: absolute;
+                    top: 60%;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+                    .EstruturaGeral .PageOne .RedesSociais .BlocoRede .bi{
+                        font-size: 30pt;
+                    }
+
+/* ////////////////////////////////////////////////////////////////// */
+
+        .EstruturaGeral .PageTwo{
+            background: linear-gradient(180deg, rgba(255, 140, 0, 0.9), rgba(255, 165, 0, 0.9));
+            width: 100%;
+            height: 100%;
+
+            grid-column: 2;
+        }
