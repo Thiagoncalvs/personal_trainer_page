@@ -7,8 +7,8 @@
     padding: 0;
     outline: none;
     /* outline: 1px dashed red; */
-    font-family: 'Roboto', sans-serif;
     font-size: 12pt;
+    text-decoration: none;
     color: white;
     border: none;
     font-family: "HansomFYW01-Bold";
@@ -54,6 +54,7 @@ body{
             height: 15%;
 
             color: #FFFFF0;
+            z-index: 7;
         }
             .EstruturaGeral .Logo h1{
                 font-size: 23pt;
@@ -103,6 +104,8 @@ body{
             display: flex;
             flex-direction: row;
             justify-content: space-between;
+
+            z-index: 3;
         }
             .EstruturaGeral .ButtonScroll button{
                 background: none;
@@ -115,6 +118,21 @@ body{
                     color: #FFFFF0;
                     /* opacity: 0.5; */
                 }
+                .EstruturaGeral .ButtonScroll button .right1{
+                    background: linear-gradient(-90deg, #e18825, rgba(238, 232, 67, 0));
+                    color: #360087;
+                }
+                .EstruturaGeral .ButtonScroll button .left2{
+                    background: linear-gradient(90deg, #360087cc, rgba(238, 232, 67, 0));
+                    color: #e18825;
+                }
+                .EstruturaGeral .ButtonScroll button .right2{
+                    background: linear-gradient(-90deg, #FFFFF0cc, rgba(238, 232, 67, 0));
+                    color: #e18825;
+                }
+                .EstruturaGeral .ButtonScroll button .left3{
+                    background: linear-gradient(90deg, #e08700cc, rgba(238, 232, 67, 0));
+                }
         .EstruturaGeral .AssinDev{
             position: fixed;
             width: 100%;
@@ -123,6 +141,8 @@ body{
             left: 0;
             
             opacity: 0.5;
+
+            z-index: 7;
         }
             .EstruturaGeral .AssinDev p{
                 font-family: 'Roboto', sans-serif;
@@ -142,13 +162,15 @@ body{
 /* ///////////////////////////////////////////////////////////// */
 
         .EstruturaGeral .PageOne{
-            background: rgba(54, 0, 135, 0.8);
+            background: #360087cc;
             width: 100%;
             height: 100%;
 
             grid-column: 1;
 
             position: relative;
+
+            z-index: 1;
         }
                 .EstruturaGeral .PageOne .RedesSociais{
                     border-radius: 10px;
@@ -193,7 +215,7 @@ body{
                                     width: 30%;
                                     height: 1px;
 
-                                    background: #FFFFF0;
+                                    background: #e18825;
                                 }
                     .EstruturaGeral .PageOne .RedesSociais a .BlocoRede{
                         background: linear-gradient(60deg,rgba(255, 255, 240, 0.8), rgba(177, 177, 177, 0.8));
@@ -212,17 +234,174 @@ body{
                             font-size: 30pt;
                             color: rgb(54, 0, 135);
                         }
+                .EstruturaGeral .PageOne .LinesAction{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+
+                    width: 100%;
+                    height: 100%;
+
+                    z-index: 2;
+                }
+                    .EstruturaGeral .PageOne .LinesAction p{
+                        color: #e18825;
+                        position: absolute;
+                        font-style: normal;
+                        font-family: 'Roboto', sans-serif;
+                    }
+                    .EstruturaGeral .PageOne .LinesAction #LineZero{
+                        bottom: 20%;
+                        left: 0;
+
+                        font-size: 7pt;
+                    }
+                    .EstruturaGeral .PageOne .LinesAction #LineOne{
+                        top: 25%;
+                        left: 0;
+
+                        font-size: 7pt;
+                    }
+                    .EstruturaGeral .PageOne .LinesAction #LineTwo{
+                        top: 30%;
+                        left: 0;
+
+                        font-size: 10pt;
+                    }
+                    .EstruturaGeral .PageOne .LinesAction #LineThree{
+                        top: 20%;
+                        right: 0;
+
+                        font-size: 12pt;
+                    }
+
 
 /* ////////////////////////////////////////////////////////////////// */
 
         .EstruturaGeral .PageTwo{
-            background: linear-gradient(180deg, rgba(223, 133, 0, 0.8), rgba(225, 136, 37, 0.8), rgba(238, 232, 67, 0.5));
+            background: linear-gradient(180deg, rgba(224, 135, 0, 0.8), #e18825cc, rgba(238, 232, 67, 0.5));
             width: 100%;
             height: 100%;
 
             grid-column: 2;
             position: relative;
+
+            z-index: 1;
         }
+            .EstruturaGeral .PageTwo .ContainerPageTwo{
+                background: none;
+                width: 100%;
+                height: 100%;
+
+                display: grid;
+                grid-template-columns: 100%;
+                grid-template-rows: 50% 25% 25%;
+            }
+                .EstruturaGeral .PageTwo .ContainerPageTwo .AreaFoto{
+                    width: 100%;
+                    height: 100%;
+
+                    position: relative;
+                }
+                    .EstruturaGeral .PageTwo .ContainerPageTwo .AreaFoto .DivFoto{
+                        background-image: url(./IMG/falling-notebook-dois.png);
+                        background-size: 70%;
+                        background-repeat: no-repeat;
+                        background-position: bottom;
+
+                        width: 90%;
+                        height: 90%;
+
+                        position: absolute;
+                        bottom: 50%;
+                        left: 50%;
+                        transform: translate(-50%,50%);
+
+                        z-index: 10;
+                    }
+                .EstruturaGeral .PageTwo .ContainerPageTwo .AreaText{
+                    width: 100%;
+                    height: 100%;
+                    
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                }
+                    .EstruturaGeral .PageTwo .ContainerPageTwo .AreaText h1{
+                        font-size: 23pt;
+                        font-style: normal;
+                    }
+                    .EstruturaGeral .PageTwo .ContainerPageTwo .AreaText p{
+                        font-size: 14pt;
+                        text-align: center;
+                        font-style: normal;
+                    }
+                .EstruturaGeral .PageTwo .ContainerPageTwo .ButtonSaiba{
+                    width: 100%;
+                    height: 100%;
+                    position: relative;
+                }
+
+                    .EstruturaGeral .PageTwo .ContainerPageTwo .ButtonSaiba .BodyButton{
+                        width: 80%;
+                        height: 40%;
+                        position: absolute;
+                        top: 35%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        border: 1px solid #FFFFF0;
+                        border-radius: 50px;
+
+                        background: none;
+                    }
+                        .EstruturaGeral .PageTwo .ContainerPageTwo .ButtonSaiba .BodyButton p{
+                            font-style: normal;
+                            font-size: 18pt;
+                            color: #FFFFF0;
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                        }
+            .EstruturaGeral .PageTwo .LinesAction{
+                position: absolute;
+                top: 0;
+                left: 0;
+
+                overflow: hidden;
+
+                width: 100%;
+                height: 100%;
+
+                z-index: 2;
+            }
+                .EstruturaGeral .PageTwo .LinesAction p{
+                    color: #360087;
+                    position: absolute;
+                    font-style: normal;
+                    font-family: 'Roboto', sans-serif;
+                }
+                .EstruturaGeral .PageTwo .LinesAction #LineZero{
+                    bottom: 25%;
+                    left: 0;
+
+                    font-size: 12pt;
+                }
+                .EstruturaGeral .PageTwo .LinesAction #LineOne{
+                    bottom: 8%;
+                    right: 0;
+
+                    font-size: 7pt;
+                }
+                .EstruturaGeral .PageTwo .LinesAction #LineThree{
+                    top: 20%;
+                    right: 0;
+
+                    font-size: 12pt;
+                }
+
+/* ////////////////////////////////////////////////////////////////// */
         .EstruturaGeral .PageThree{
             background: linear-gradient(60deg,rgba(255, 255, 240, 0.8), rgba(177, 177, 177, 0.8));
             width: 100%;
@@ -230,4 +409,80 @@ body{
 
             grid-column: 3;
             position: relative;
+
+            z-index: 1;
         }
+            .EstruturaGeral .PageThree .MyPhoto{
+                background-image: url(./IMG/105355645_467239054232700_7095052847190547136_n.jpg);
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                width: 80%;
+                height: 40%;
+                border-radius: 10px 0 0 50px;
+
+                position: absolute;
+                top: 40%;
+                right: 0;
+                transform: translateY(-50%);
+            }
+            .EstruturaGeral .PageThree .AboutMe{
+                width: 80%;
+                height: auto;
+
+                position: absolute;
+                bottom: 15%;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+                .EstruturaGeral .PageThree .AboutMe p{
+                    text-align: center;
+                    font-size: 14pt;
+                    font-style: normal;
+                    font-family: 'Roboto', sans-serif;
+                    color: rgba(0, 0, 0, 0.8);
+                }
+            .EstruturaGeral .PageThree .LinesAction{
+                position: absolute;
+                top: 0;
+                left: 0;
+
+                width: 100%;
+                height: 100%;
+
+                z-index: 2;
+            }
+                .EstruturaGeral .PageThree .LinesAction p{
+                    color: #e18825;
+                    position: absolute;
+                    font-style: normal;
+                    font-family: 'Roboto', sans-serif;
+                }
+                .EstruturaGeral .PageThree .LinesAction #LineZero{
+                    bottom: 8%;
+                    right: 0;
+
+                    font-size: 12pt;
+                }
+                .EstruturaGeral .PageThree .LinesAction #LineOne{
+                    bottom: 12%;
+                    right: 0;
+
+                    font-size: 7pt;
+                }
+                .EstruturaGeral .PageThree .LinesAction #LineTwo{
+                    top: 30%;
+                    left: 0;
+
+                    font-size: 10pt;
+                }
+                    .EstruturaGeral .PageThree .LinesAction #LineTwo .bi{
+                        color: #e18825;
+                    }
+                .EstruturaGeral .PageThree .LinesAction #LineThree{
+                    color: #360087;
+                    top: 20%;
+                    left: 0;
+
+                    font-size: 12pt;
+                }
