@@ -29,7 +29,7 @@ body{
         height: 100%;
 
         display: grid;
-        grid-template-columns: 100% 100% 100%;
+        grid-template-columns: 95% 95% 100%;
         grid-template-rows: 100%;
 
         scroll-snap-type: x mandatory;
@@ -37,9 +37,6 @@ body{
 
         position: relative;
     }
-        .EstruturaGeral::-webkit-scrollbar{
-            height: 0;
-        }
         .EstruturaGeral .Logo{
             /* background: green; */
             position: fixed;
@@ -57,10 +54,11 @@ body{
             color: #FFFFF0;
             z-index: 7;
         }
-            .EstruturaGeral .Logo h1{
-                font-size: 23pt;
-            }
             .EstruturaGeral .Logo p{
+                font-size: 23pt;
+                font-weight: bold;
+            }
+            .EstruturaGeral .Logo h1{
                 font-size: 8.5pt;
                 letter-spacing: 2px;
             }
@@ -75,7 +73,7 @@ body{
             .EstruturaGeral .Logo .LogoMain p#p1{
                 position: absolute;
                 top: 10%;
-                right: 22px;
+                right: 24px;
 
                 font-size: 50pt;
                 font-style: normal;
@@ -91,75 +89,36 @@ body{
                 transform: rotateY(-180deg)
                 rotate(-45deg);
             }
-        .EstruturaGeral .ButtonScroll{
-            background: none;
-
-            width: 100%;
-            height: 10%;
-            
-            position: absolute;
-            top: 50%;
-            left: 0;
-            transform: translateY(-50%);
-
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-
-            z-index: 3;
-        }
-            .EstruturaGeral .ButtonScroll button{
+            .EstruturaGeral button{
                 background: none;
 
-                width: 100%;
-                height: 100%;
+                position: absolute;
+                top: 50%;
+                right: 0;
+                transform: translateY(-50%);
+                z-index: 20;
+
             }
-                .EstruturaGeral .ButtonScroll button .bi{
+                .EstruturaGeral button .right1{
                     font-size: 30pt;
-                    color: #FFFFF0;
-                    /* opacity: 0.5; */
-                }
-                .EstruturaGeral .ButtonScroll button .right1{
                     background: linear-gradient(-90deg, #e18825, rgba(238, 232, 67, 0));
                     color: #360087;
+
                 }
-                .EstruturaGeral .ButtonScroll button .left2{
-                    background: linear-gradient(90deg, #360087cc, rgba(238, 232, 67, 0));
-                    color: #e18825;
-                }
-                .EstruturaGeral .ButtonScroll button .right2{
+                .EstruturaGeral button .right2{
+                    font-size: 30pt;
                     background: linear-gradient(-90deg, #FFFFF0cc, rgba(238, 232, 67, 0));
                     color: #e18825;
                 }
-                .EstruturaGeral .ButtonScroll button .left3{
-                    background: linear-gradient(90deg, #e08700cc, rgba(238, 232, 67, 0));
-                }
-        .EstruturaGeral .AssinDev{
-            position: fixed;
-            width: 100%;
-            height: 7%;
-            bottom: 0;
-            left: 0;
-            
-            opacity: 0.5;
 
-            z-index: 7;
-        }
-            .EstruturaGeral .AssinDev p{
-                font-family: 'Roboto', sans-serif;
-                font-size: 10pt;
-                text-align: center;
-                width: 70%;
-                height: 50%;
-                padding-top: 3%;
+[data-colorlogo].Colored p{
+    color: #360087;
+}
+[data-colorlogo].Colored h1{
+    color: #e18825;
+}
 
-                position: relative;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
 
-                border-top: #FFFFF0 1px solid;
-            }
 /* ///////////////////////////////////////////////////////////// */
 
         .EstruturaGeral .PageOne{
@@ -171,7 +130,6 @@ body{
 
             position: relative;
 
-            z-index: 1;
 
             scroll-snap-align: start;
         }
@@ -182,9 +140,10 @@ body{
                     height: 12%;
 
                     display: grid;
-                    grid-template-columns: repeat(4, calc(100% / 4 - 5px));
+                    grid-template-columns: 100%;
                     grid-template-rows: 200% 100%;
-                    justify-content: space-between;
+                    justify-content: center;
+                    align-items: center;
 
                     position: absolute;
                     top: 35%;
@@ -220,6 +179,15 @@ body{
 
                                     background: #e18825;
                                 }
+                    .EstruturaGeral .PageOne .RedesSociais .ContainerButtonRedes{
+                        display: grid;
+                        grid-template-columns: repeat(4, calc(100% / 4 - 5px));
+                        grid-template-rows: 100%;
+                        justify-content: space-around;
+
+                        width: 100%;
+                        height: 100%;
+                    }
                     .EstruturaGeral .PageOne .RedesSociais a .BlocoRede{
                         background: linear-gradient(60deg,rgba(255, 255, 240, 0.8), rgba(177, 177, 177, 0.8));
                         width: 100%;
@@ -290,7 +258,6 @@ body{
             grid-column: 2;
             position: relative;
 
-            z-index: 1;
 
             scroll-snap-align: start;
         }
@@ -310,7 +277,7 @@ body{
                     position: relative;
                 }
                     .EstruturaGeral .PageTwo .ContainerPageTwo .AreaFoto .DivFoto{
-                        background-image: url(./IMG/falling-notebook-dois.png);
+                        background-image: url(./IMG/falling-notebook-dois-Laranja.png);
                         background-size: 70%;
                         background-repeat: no-repeat;
                         background-position: bottom;
@@ -356,7 +323,8 @@ body{
                         top: 35%;
                         left: 50%;
                         transform: translate(-50%, -50%);
-                        border: 1px solid #FFFFF0;
+                        border: 1px solid #360087
+                        ;
                         border-radius: 50px;
 
                         background: none;
@@ -364,7 +332,8 @@ body{
                         .EstruturaGeral .PageTwo .ContainerPageTwo .ButtonSaiba .BodyButton p{
                             font-style: normal;
                             font-size: 18pt;
-                            color: #FFFFF0;
+                            color: #360087
+                            ;
                             position: absolute;
                             top: 50%;
                             left: 50%;
@@ -416,7 +385,6 @@ body{
             grid-column: 3;
             position: relative;
 
-            z-index: 1;
 
             scroll-snap-align: start;
         }
@@ -494,3 +462,177 @@ body{
 
                     font-size: 12pt;
                 }
+                .EstruturaGeral .PageThree .AssinDev{
+                    position: fixed;
+                    width: 100%;
+                    height: 7%;
+                    bottom: 0;
+                    left: 0;
+                    
+                    opacity: 0.5;
+        
+                    z-index: 7;
+                }
+                    .EstruturaGeral .PageThree .AssinDev p{
+                        font-family: 'Roboto', sans-serif;
+                        font-size: 10pt;
+                        text-align: center;
+                        width: 70%;
+                        height: 50%;
+                        padding-top: 3%;
+        
+                        position: relative;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+        
+                        border-top: #FFFFF0 1px solid;
+                    }
+
+
+@media (min-width: 1200px) {
+    .EstruturaGeral{
+        grid-template-columns: 100%;
+        grid-template-rows: 95% 95% 100%;
+        scroll-snap-type: y mandatory;
+        overflow-x: hidden;
+    }
+        .EstruturaGeral .Logo{
+            justify-content: flex-start;
+        }
+            .EstruturaGeral .Logo p{
+                font-size: 30pt;
+            }
+            .EstruturaGeral .Logo h1{
+                font-size: 11pt;
+            }
+        .EstruturaGeral .Logo .LogoMain{
+            width:100px;
+        }
+            .EstruturaGeral .Logo .LogoMain p#p1{
+                top: -6%;
+                right: 29px;
+                font-size: 70pt;
+            }
+            .EstruturaGeral .Logo .LogoMain p#p2{
+                top: -6%;
+                right: 10px;
+                font-size: 70pt;
+            }
+        .EstruturaGeral a#BotaoNavegacao{
+            display: none;
+        }
+
+        .EstruturaGeral .PageOne{
+            grid-column: 1;
+            grid-row: 1;
+        }
+        .EstruturaGeral .PageOne .RedesSociais{
+            width: 60%;
+            height: 15%;
+
+            grid-template-rows: 300% 100%;
+            top: 25%;
+        }
+        .EstruturaGeral .PageOne .RedesSociais .BlocoText{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+        }
+            .EstruturaGeral .PageOne .RedesSociais .BlocoText p{
+                width: 80%;
+                font-size: 36pt;
+            }
+                .EstruturaGeral .PageOne .RedesSociais .BlocoText p + p{
+                    width: auto;
+                    padding-top: 4%;
+                }
+                .EstruturaGeral .PageOne .RedesSociais .ContainerButtonRedes{
+                    margin: 0 auto;
+                    width: 55%;
+                    height: 70%;
+                }
+        .EstruturaGeral .PageOne .RedesSociais a .BlocoRede{
+            background: linear-gradient(60deg,rgba(255, 255, 240, 0.8), rgba(177, 177, 177, 0.8));
+            width: 100%;
+        }
+            .EstruturaGeral .PageOne .RedesSociais .BlocoRede .bi{
+                font-size: 30pt;
+                color: rgb(54, 0, 135);
+            }
+
+        .EstruturaGeral .PageTwo{
+            grid-column: 1;
+            grid-row: 2;
+        }
+            .EstruturaGeral .PageTwo .ContainerPageTwo{
+                grid-template-rows: 60% 25% 15%;
+            }
+                .EstruturaGeral .PageTwo .ContainerPageTwo .AreaFoto .DivFoto{
+                    background-size: 45%;
+                    width: 60%;
+                    bottom: 0;
+                    transform: translateX(-50%);
+                }
+        .EstruturaGeral .PageTwo .ContainerPageTwo .AreaText{
+            justify-content: space-around;
+        }
+            .EstruturaGeral .PageTwo .ContainerPageTwo .AreaText h1{
+                font-size: 35pt;
+            }
+            .EstruturaGeral .PageTwo .ContainerPageTwo .AreaText p{
+                font-size: 14pt;
+            }
+            .EstruturaGeral .PageTwo .ContainerPageTwo .ButtonSaiba .BodyButton{
+                width: 35%;
+                height: 60%;
+                top: 50%;
+            }
+
+        .EstruturaGeral .PageThree{
+            grid-column: 1;
+            grid-row: 3;
+        }
+        .EstruturaGeral .PageThree .MyPhoto{
+            background-image: url(./IMG/me.jpg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            width: 35%;
+            height: 75%;
+            border-radius: 50px 10px 50px 10px;
+
+            position: absolute;
+            top: 50%;
+            right: 10%;
+            transform: translateY(-50%);
+        }
+        .EstruturaGeral .PageThree .AboutMe{
+            width: 40%;
+            height: auto;
+
+            position: absolute;
+            top: 40%;
+            left: 10%;
+            transform: translateX(0);
+        }
+            .EstruturaGeral .PageThree .AboutMe p{
+                text-align: center;
+                font-size: 14pt;
+                font-style: normal;
+                font-family: 'Roboto', sans-serif;
+                color: rgba(0, 0, 0, 0.8);
+            }
+            .EstruturaGeral .PageThree .AssinDev{
+                position: absolute;
+                height: 10%;
+            }
+                .EstruturaGeral .PageThree .AssinDev p{
+                    font-size: 10pt;
+                    width: 40%;
+                    height: 50%;
+                    padding-top: 20px;
+
+                }
+}
