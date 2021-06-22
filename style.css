@@ -733,7 +733,7 @@ body{
             }
 }
 
-@media (min-width: 600px){
+@media (max-width: 1200px){ 
     .EstruturaGeral .PageOne .RedesSociais .BlocoText p{
         font-size: 40pt;
     }
