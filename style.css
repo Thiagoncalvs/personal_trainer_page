@@ -7,6 +7,7 @@
     padding: 0;
     outline: none;
     /* outline: 1px dashed red; */
+    list-style: none;
     font-size: 12pt;
     text-decoration: none;
     color: white;
@@ -149,6 +150,7 @@ body{
                     top: 35%;
                     left: 50%;
                     transform: translateX(-50%);
+                    z-index: 2;
                 }
                     .EstruturaGeral .PageOne .RedesSociais .BlocoText{
                         width: 100%;
@@ -214,7 +216,7 @@ body{
                     width: 100%;
                     height: 100%;
 
-                    z-index: 2;
+                    z-index: 1;
                 }
                     .EstruturaGeral .PageOne .LinesAction p{
                         color: #e18825;
@@ -290,7 +292,7 @@ body{
                         left: 50%;
                         transform: translate(-50%,50%);
 
-                        z-index: 10;
+                        z-index: 3;
                     }
                 .EstruturaGeral .PageTwo .ContainerPageTwo .AreaText{
                     width: 100%;
@@ -300,6 +302,7 @@ body{
                     flex-direction: column;
                     justify-content: center;
                     align-items: center;
+                    z-index: 3;
                 }
                     .EstruturaGeral .PageTwo .ContainerPageTwo .AreaText h1{
                         font-size: 23pt;
@@ -314,8 +317,8 @@ body{
                     width: 100%;
                     height: 100%;
                     position: relative;
+                    z-index: 3;
                 }
-
                     .EstruturaGeral .PageTwo .ContainerPageTwo .ButtonSaiba .BodyButton{
                         width: 80%;
                         height: 40%;
@@ -323,8 +326,7 @@ body{
                         top: 35%;
                         left: 50%;
                         transform: translate(-50%, -50%);
-                        border: 1px solid #360087
-                        ;
+                        border: 1px solid #360087;
                         border-radius: 50px;
 
                         background: none;
@@ -375,6 +377,9 @@ body{
 
                     font-size: 12pt;
                 }
+                    .EstruturaGeral .PageTwo .LinesAction #LineThree #SpanLineThree{
+                        display: none;
+                    }
 
 /* ////////////////////////////////////////////////////////////////// */
         .EstruturaGeral .PageThree{
@@ -407,12 +412,15 @@ body{
                 height: auto;
 
                 position: absolute;
-                bottom: 15%;
+                bottom: 8%;
                 left: 50%;
                 transform: translateX(-50%);
+                z-index: 23;
             }
+                .EstruturaGeral .PageThree .AboutMe li{
+                    margin-bottom: 5px;
+                }
                 .EstruturaGeral .PageThree .AboutMe p{
-                    text-align: center;
                     font-size: 14pt;
                     font-style: normal;
                     font-family: 'Roboto', sans-serif;
@@ -523,6 +531,8 @@ body{
             display: none;
         }
 
+/* ///////////////////////////////////////////////////////////////////////////////////////////// */
+
         .EstruturaGeral .PageOne{
             grid-column: 1;
             grid-row: 1;
@@ -541,8 +551,8 @@ body{
             align-items: center;
         }
             .EstruturaGeral .PageOne .RedesSociais .BlocoText p{
-                width: 80%;
-                font-size: 36pt;
+                width: 95%;
+                font-size: 45pt;
             }
                 .EstruturaGeral .PageOne .RedesSociais .BlocoText p + p{
                     width: auto;
@@ -561,34 +571,89 @@ body{
                 font-size: 30pt;
                 color: rgb(54, 0, 135);
             }
+                .EstruturaGeral .PageOne .RedesSociais .BlocoRede:hover .bi{
+                    color: white;
+                }
+            .EstruturaGeral .PageOne .RedesSociais a .b1redes:hover{
+                background: linear-gradient(30deg,rgb(252, 159, 81), rgb(247, 48, 51),rgb(220, 53, 88),rgb(159, 61, 146));
+            }
+            .EstruturaGeral .PageOne .RedesSociais a .b2redes:hover{
+                background: rgb(63, 87, 147);
+            }
+            .EstruturaGeral .PageOne .RedesSociais a .b3redes:hover{
+                background: rgb(37, 209, 101);
+            }
+            .EstruturaGeral .PageOne .RedesSociais a .b4redes:hover{
+                background: rgb(42, 169, 224);
+            }
+        .EstruturaGeral .PageOne .LinesAction #LineThree{
+            top: 20%;
+            right: 0;
+            
+            font-size: 14pt;
+        }
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////// */
 
         .EstruturaGeral .PageTwo{
             grid-column: 1;
             grid-row: 2;
         }
             .EstruturaGeral .PageTwo .ContainerPageTwo{
-                grid-template-rows: 60% 25% 15%;
+                grid-template-columns: 50% 50%;
+                grid-template-rows: 50% 50%;
             }
-                .EstruturaGeral .PageTwo .ContainerPageTwo .AreaFoto .DivFoto{
-                    background-size: 45%;
-                    width: 60%;
-                    bottom: 0;
-                    transform: translateX(-50%);
+                .EstruturaGeral .PageTwo .ContainerPageTwo .AreaFoto{
+                    grid-column: 2;
+                    grid-row: 1 / -1;
                 }
-        .EstruturaGeral .PageTwo .ContainerPageTwo .AreaText{
-            justify-content: space-around;
-        }
-            .EstruturaGeral .PageTwo .ContainerPageTwo .AreaText h1{
-                font-size: 35pt;
-            }
-            .EstruturaGeral .PageTwo .ContainerPageTwo .AreaText p{
-                font-size: 14pt;
-            }
-            .EstruturaGeral .PageTwo .ContainerPageTwo .ButtonSaiba .BodyButton{
-                width: 35%;
-                height: 60%;
-                top: 50%;
-            }
+                    .EstruturaGeral .PageTwo .ContainerPageTwo .AreaFoto .DivFoto{
+                        background-position: center;
+                        background-size: 90%;
+                    }
+                .EstruturaGeral .PageTwo .ContainerPageTwo .AreaText{
+                    grid-column: 1;
+                    grid-row: 1;
+                    display: block;
+                    position: relative;
+                }
+                    .EstruturaGeral .PageTwo .ContainerPageTwo .AreaText h1{
+                        font-size: 35pt;
+                        position: absolute;
+                        bottom: 70px;
+                        left: 100px;
+                    }
+                    .EstruturaGeral .PageTwo .ContainerPageTwo .AreaText p{
+                        font-size: 14pt;
+                        text-align: left;
+                        position: absolute;
+                        bottom: 20px;
+                        left: 100px;
+                    }
+                .EstruturaGeral .PageTwo .ContainerPageTwo .ButtonSaiba{
+                    grid-column: 1;
+                    grid-row: 2;
+                }
+                    .EstruturaGeral .PageTwo .ContainerPageTwo .ButtonSaiba .BodyButton{
+                        width: 45%;
+                        height: 20%;
+                        top: 0;
+                        left: 100px;
+                        transform: translate(0, 0);
+                    }
+                        .EstruturaGeral .PageTwo .ContainerPageTwo .ButtonSaiba .BodyButton:hover{
+                            background-color: #360087;
+                        }
+                            .EstruturaGeral .PageTwo .ContainerPageTwo .ButtonSaiba .BodyButton:hover p{
+                                color: rgba(255, 255, 240, 0.8);
+                            }
+                .EstruturaGeral .PageTwo .LinesAction #LineThree #SpanLineThree{
+                    color: #360087;
+                    font-size: 12pt;
+                    font-style: normal;
+                }
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////// */
 
         .EstruturaGeral .PageThree{
             grid-column: 1;
@@ -613,13 +678,23 @@ body{
             height: auto;
 
             position: absolute;
-            top: 40%;
+            top: 50%;
             left: 10%;
-            transform: translateX(0);
+            transform: translateX(0)
+            translateY(-50%);
         }
+            .EstruturaGeral .PageThree .AboutMe ul{
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+                .EstruturaGeral .PageThree .AboutMe li{
+                    margin-bottom: 18px;
+                }
             .EstruturaGeral .PageThree .AboutMe p{
-                text-align: center;
-                font-size: 14pt;
+                text-align: left;
+                font-size: 18pt;
                 font-style: normal;
                 font-family: 'Roboto', sans-serif;
                 color: rgba(0, 0, 0, 0.8);
@@ -635,4 +710,67 @@ body{
                     padding-top: 20px;
 
                 }
+
+            .EstruturaGeral .PageThree .LinesAction #LineZero{
+                top: 18%;
+                font-size: 18pt;
+            }
+            .EstruturaGeral .PageThree .LinesAction #LineOne{
+                top: 23%;
+                font-size: 12pt;
+                color: #360087;
+            }
+            .EstruturaGeral .PageThree .LinesAction #LineTwo{
+                font-size: 15pt;
+                bottom: 20%;
+                top: unset;
+            }
+            .EstruturaGeral .PageThree .LinesAction #LineThree{
+                font-size: 15pt;
+                color: #e18825;
+                bottom: 30%;
+                top: unset;
+            }
+}
+
+@media (min-width: 600px){
+    .EstruturaGeral .PageOne .RedesSociais .BlocoText p{
+        font-size: 40pt;
+    }
+        .EstruturaGeral .PageOne .RedesSociais .BlocoText p + p{
+            font-size: 18pt;
+        }
+
+    .EstruturaGeral .PageOne .RedesSociais{
+        width: 90%;
+        height: 10%;
+
+        grid-template-rows: 300% 100%;
+        top: 30%;
+    }
+        .EstruturaGeral .PageOne .RedesSociais .ContainerButtonRedes{
+            margin: 0 auto;
+            width: 90%;
+            height: 100%;
+        }
+
+    .EstruturaGeral .PageTwo .ContainerPageTwo .AreaFoto .DivFoto{
+        bottom: 30%;
+    }
+
+    .EstruturaGeral .PageTwo .ContainerPageTwo .AreaText h1{
+            font-size: 40pt;
+    }
+    .EstruturaGeral .PageTwo .ContainerPageTwo .AreaText p{
+            font-size: 20pt;
+    }
+
+    .EstruturaGeral .PageThree .MyPhoto{
+        width: 70%;
+        height: 60%;
+        top: 45%;
+    }
+    .EstruturaGeral .PageThree .AboutMe p{
+        font-size: 18pt;
+    }
 }
