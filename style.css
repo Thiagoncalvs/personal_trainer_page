@@ -56,61 +56,36 @@ body{
             z-index: 7;
         }
             .EstruturaGeral .Logo p{
-                font-size: 23pt;
+                font-size: max(18pt, 3.5vw);
                 font-weight: bold;
             }
             .EstruturaGeral .Logo h1{
-                font-size: 8.5pt;
-                letter-spacing: 2px;
+                font-size: max(5pt, 1.3vw);
+                letter-spacing: 2.5px;
             }
-        .EstruturaGeral .Logo .LogoMain{
-            position: relative;
-            top: 0;
-            left: 0;
-            /* background: #ff000059; */
-            width:73px;
-            height: 100%;
+        .EstruturaGeral button{
+            background: none;
+
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+            z-index: 20;
+
         }
-            .EstruturaGeral .Logo .LogoMain p#p1{
-                position: absolute;
-                top: 10%;
-                right: 24px;
-
-                font-size: 50pt;
-                font-style: normal;
-                transform: rotate(-45deg);
-            }
-            .EstruturaGeral .Logo .LogoMain p#p2{
-                position: absolute;
-                top: 10%;
-                right: 10px;
-
-                font-size: 50pt;
-                font-style: normal;
-                transform: rotateY(-180deg)
-                rotate(-45deg);
-            }
-            .EstruturaGeral button{
-                background: none;
-
-                position: absolute;
-                top: 50%;
-                right: 0;
-                transform: translateY(-50%);
-                z-index: 20;
+            .EstruturaGeral button .right1{
+                /* font-size: 30pt; */
+                font-size: max(15pt, 4.5vw);
+                background: linear-gradient(-90deg, #e18825, rgba(238, 232, 67, 0));
+                color: #360087;
 
             }
-                .EstruturaGeral button .right1{
-                    font-size: 30pt;
-                    background: linear-gradient(-90deg, #e18825, rgba(238, 232, 67, 0));
-                    color: #360087;
-
-                }
-                .EstruturaGeral button .right2{
-                    font-size: 30pt;
-                    background: linear-gradient(-90deg, #FFFFF0cc, rgba(238, 232, 67, 0));
-                    color: #e18825;
-                }
+            .EstruturaGeral button .right2{
+                /* font-size: 30pt; */
+                font-size: max(15pt, 4.5vw);
+                background: linear-gradient(-90deg, #FFFFF0cc, rgba(238, 232, 67, 0));
+                color: #e18825;
+            }
 
 [data-colorlogo].Colored p{
     color: #360087;
@@ -121,7 +96,6 @@ body{
 
 
 /* ///////////////////////////////////////////////////////////// */
-
         .EstruturaGeral .PageOne{
             background: #360087cc;
             width: 100%;
@@ -160,11 +134,11 @@ body{
                         grid-row: 1;
                     }
                         .EstruturaGeral .PageOne .RedesSociais .BlocoText p{
-                            font-size: 23pt;
+                            font-size: max(12pt, 4vw);
                             text-align: center;
                         }
                             .EstruturaGeral .PageOne .RedesSociais .BlocoText p + p{
-                                font-size: 15pt;
+                                font-size: max(8pt, 1.5vw);
                                 padding-top: 10%;
 
                                 position: relative;
@@ -205,7 +179,7 @@ body{
                         align-items: center;
                     }
                         .EstruturaGeral .PageOne .RedesSociais .BlocoRede .bi{
-                            font-size: 30pt;
+                            font-size: max(15pt, 3vw);
                             color: rgb(54, 0, 135);
                         }
                 .EstruturaGeral .PageOne .LinesAction{
@@ -228,30 +202,29 @@ body{
                         bottom: 20%;
                         left: 0;
 
-                        font-size: 7pt;
+                        font-size: max(5pt, 1vw);
                     }
                     .EstruturaGeral .PageOne .LinesAction #LineOne{
                         top: 25%;
                         left: 0;
 
-                        font-size: 7pt;
+                        font-size: max(5pt, 1vw);
                     }
                     .EstruturaGeral .PageOne .LinesAction #LineTwo{
                         top: 30%;
                         left: 0;
 
-                        font-size: 10pt;
+                        font-size: max(6pt, 1.5vw);
                     }
                     .EstruturaGeral .PageOne .LinesAction #LineThree{
                         top: 20%;
                         right: 0;
 
-                        font-size: 12pt;
+                        font-size: max(6pt, 1.5vw);
                     }
 
 
 /* ////////////////////////////////////////////////////////////////// */
-
         .EstruturaGeral .PageTwo{
             background: linear-gradient(180deg, rgba(224, 135, 0, 0.8), #e18825cc, rgba(238, 232, 67, 0.5));
             width: 100%;
@@ -305,11 +278,11 @@ body{
                     z-index: 3;
                 }
                     .EstruturaGeral .PageTwo .ContainerPageTwo .AreaText h1{
-                        font-size: 23pt;
+                        font-size: max(13pt, 3.5vw);
                         font-style: normal;
                     }
                     .EstruturaGeral .PageTwo .ContainerPageTwo .AreaText p{
-                        font-size: 14pt;
+                        font-size: max(7pt, 1.4vw);
                         text-align: center;
                         font-style: normal;
                     }
@@ -333,7 +306,7 @@ body{
                     }
                         .EstruturaGeral .PageTwo .ContainerPageTwo .ButtonSaiba .BodyButton p{
                             font-style: normal;
-                            font-size: 18pt;
+                            font-size: max(10pt, 1.8vw);
                             color: #360087
                             ;
                             position: absolute;
@@ -363,19 +336,19 @@ body{
                     bottom: 25%;
                     left: 0;
 
-                    font-size: 12pt;
+                    font-size: max(5pt, 1vw);
                 }
                 .EstruturaGeral .PageTwo .LinesAction #LineOne{
                     bottom: 8%;
                     right: 0;
 
-                    font-size: 7pt;
+                    font-size: max(5pt, 1vw);
                 }
                 .EstruturaGeral .PageTwo .LinesAction #LineThree{
                     top: 20%;
                     right: 0;
 
-                    font-size: 12pt;
+                    font-size: max(6pt, 1.5vw);
                 }
                     .EstruturaGeral .PageTwo .LinesAction #LineThree #SpanLineThree{
                         display: none;
@@ -403,7 +376,7 @@ body{
                 border-radius: 50px 0 0 10px;
 
                 position: absolute;
-                top: 40%;
+                top: 45%;
                 right: 0;
                 transform: translateY(-50%);
             }
@@ -412,7 +385,7 @@ body{
                 height: auto;
 
                 position: absolute;
-                bottom: 8%;
+                bottom: 10%;
                 left: 50%;
                 transform: translateX(-50%);
                 z-index: 23;
@@ -421,7 +394,7 @@ body{
                     margin-bottom: 5px;
                 }
                 .EstruturaGeral .PageThree .AboutMe p{
-                    font-size: 14pt;
+                    font-size: max(8pt, 2vw);
                     font-style: normal;
                     font-family: 'Roboto', sans-serif;
                     color: rgba(0, 0, 0, 0.8);
@@ -446,29 +419,30 @@ body{
                     bottom: 8%;
                     right: 0;
 
-                    font-size: 12pt;
+                    font-size: max(6pt, 1vw);
                 }
                 .EstruturaGeral .PageThree .LinesAction #LineOne{
                     bottom: 12%;
                     right: 0;
 
-                    font-size: 7pt;
+                    font-size: max(5pt, 1vw);
                 }
                 .EstruturaGeral .PageThree .LinesAction #LineTwo{
                     top: 30%;
                     left: 0;
 
-                    font-size: 10pt;
+                    font-size: max(6pt, 1vw);
                 }
                     .EstruturaGeral .PageThree .LinesAction #LineTwo .bi{
                         color: #e18825;
+                        font-size: max(6pt, 1vw);
                     }
                 .EstruturaGeral .PageThree .LinesAction #LineThree{
                     color: #360087;
                     top: 20%;
                     left: 0;
 
-                    font-size: 12pt;
+                    font-size: max(6pt, 1.5vw);
                 }
                 .EstruturaGeral .PageThree .AssinDev{
                     position: fixed;
@@ -483,7 +457,7 @@ body{
                 }
                     .EstruturaGeral .PageThree .AssinDev p{
                         font-family: 'Roboto', sans-serif;
-                        font-size: 10pt;
+                        font-size: max(5pt, 1vw);
                         text-align: center;
                         width: 70%;
                         height: 50%;
@@ -507,26 +481,8 @@ body{
     }
         .EstruturaGeral .Logo{
             justify-content: flex-start;
+            padding-left: 1vw;
         }
-            .EstruturaGeral .Logo p{
-                font-size: 30pt;
-            }
-            .EstruturaGeral .Logo h1{
-                font-size: 11pt;
-            }
-        .EstruturaGeral .Logo .LogoMain{
-            width:100px;
-        }
-            .EstruturaGeral .Logo .LogoMain p#p1{
-                top: -6%;
-                right: 29px;
-                font-size: 70pt;
-            }
-            .EstruturaGeral .Logo .LogoMain p#p2{
-                top: -6%;
-                right: 10px;
-                font-size: 70pt;
-            }
         .EstruturaGeral a#BotaoNavegacao{
             display: none;
         }
@@ -552,7 +508,6 @@ body{
         }
             .EstruturaGeral .PageOne .RedesSociais .BlocoText p{
                 width: 95%;
-                font-size: 45pt;
             }
                 .EstruturaGeral .PageOne .RedesSociais .BlocoText p + p{
                     width: auto;
@@ -568,7 +523,6 @@ body{
             width: 100%;
         }
             .EstruturaGeral .PageOne .RedesSociais .BlocoRede .bi{
-                font-size: 30pt;
                 color: rgb(54, 0, 135);
             }
                 .EstruturaGeral .PageOne .RedesSociais .BlocoRede:hover .bi{
@@ -589,8 +543,6 @@ body{
         .EstruturaGeral .PageOne .LinesAction #LineThree{
             top: 20%;
             right: 0;
-            
-            font-size: 14pt;
         }
 
 /* ///////////////////////////////////////////////////////////////////////////////////////////// */
@@ -618,13 +570,11 @@ body{
                     position: relative;
                 }
                     .EstruturaGeral .PageTwo .ContainerPageTwo .AreaText h1{
-                        font-size: 35pt;
                         position: absolute;
                         bottom: 70px;
                         left: 100px;
                     }
                     .EstruturaGeral .PageTwo .ContainerPageTwo .AreaText p{
-                        font-size: 14pt;
                         text-align: left;
                         position: absolute;
                         bottom: 20px;
@@ -647,9 +597,11 @@ body{
                             .EstruturaGeral .PageTwo .ContainerPageTwo .ButtonSaiba .BodyButton:hover p{
                                 color: rgba(255, 255, 240, 0.8);
                             }
+                .EstruturaGeral .PageTwo .LinesAction #LineThree{
+                    transform: translateX(40%);
+                }
                 .EstruturaGeral .PageTwo .LinesAction #LineThree #SpanLineThree{
                     color: #360087;
-                    font-size: 12pt;
                     font-style: normal;
                 }
 
@@ -694,7 +646,6 @@ body{
                 }
             .EstruturaGeral .PageThree .AboutMe p{
                 text-align: left;
-                font-size: 18pt;
                 font-style: normal;
                 font-family: 'Roboto', sans-serif;
                 color: rgba(0, 0, 0, 0.8);
@@ -704,7 +655,6 @@ body{
                 height: 10%;
             }
                 .EstruturaGeral .PageThree .AssinDev p{
-                    font-size: 10pt;
                     width: 40%;
                     height: 50%;
                     padding-top: 20px;
@@ -713,64 +663,19 @@ body{
 
             .EstruturaGeral .PageThree .LinesAction #LineZero{
                 top: 18%;
-                font-size: 18pt;
+                font-size: 1.5vw;
             }
             .EstruturaGeral .PageThree .LinesAction #LineOne{
                 top: 23%;
-                font-size: 12pt;
                 color: #360087;
             }
             .EstruturaGeral .PageThree .LinesAction #LineTwo{
-                font-size: 15pt;
                 bottom: 20%;
                 top: unset;
             }
             .EstruturaGeral .PageThree .LinesAction #LineThree{
-                font-size: 15pt;
                 color: #e18825;
                 bottom: 30%;
                 top: unset;
             }
-}
-
-@media (max-width: 1200px){ 
-    .EstruturaGeral .PageOne .RedesSociais .BlocoText p{
-        font-size: 40pt;
-    }
-        .EstruturaGeral .PageOne .RedesSociais .BlocoText p + p{
-            font-size: 18pt;
-        }
-
-    .EstruturaGeral .PageOne .RedesSociais{
-        width: 90%;
-        height: 10%;
-
-        grid-template-rows: 300% 100%;
-        top: 30%;
-    }
-        .EstruturaGeral .PageOne .RedesSociais .ContainerButtonRedes{
-            margin: 0 auto;
-            width: 90%;
-            height: 100%;
-        }
-
-    .EstruturaGeral .PageTwo .ContainerPageTwo .AreaFoto .DivFoto{
-        bottom: 30%;
-    }
-
-    .EstruturaGeral .PageTwo .ContainerPageTwo .AreaText h1{
-            font-size: 40pt;
-    }
-    .EstruturaGeral .PageTwo .ContainerPageTwo .AreaText p{
-            font-size: 20pt;
-    }
-
-    .EstruturaGeral .PageThree .MyPhoto{
-        width: 70%;
-        height: 60%;
-        top: 45%;
-    }
-    .EstruturaGeral .PageThree .AboutMe p{
-        font-size: 18pt;
-    }
 }
