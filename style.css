@@ -497,9 +497,12 @@ body{
         overflow-x: hidden;
     }
         .EstruturaGeral .Logo{
-            justify-content: center;
-            align-items: flex-start;
+            justify-content: start;
             padding-left: 1vw;
+        }
+        .EstruturaGeral .Logo .LogoPartOne{
+            width: 9%;
+            height: 60%;
         }
         .EstruturaGeral a#BotaoNavegacao{
             display: none;
