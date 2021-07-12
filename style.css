@@ -5,8 +5,8 @@
 *{
     margin: 0;
     padding: 0;
-    /* outline: none; */
-    outline: 1px dashed red;
+    outline: none;
+    /* outline: 1px dashed red; */
     list-style: none;
     font-size: 12pt;
     text-decoration: none;
@@ -44,9 +44,10 @@ body{
             top: 0;
             left: 0;
 
-            display: grid;
-            grid-template-columns: repeat(2, 50%);
-            grid-template-rows: repeat(2, 50%);
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
 
             width: 100%;
             height: 15%;
@@ -54,39 +55,21 @@ body{
             color: #FFFFF0;
             z-index: 7;
         }
-            .EstruturaGeral .Logo .Logozinha{
-                background: #360087;
-                grid-column: 1;
-                grid-row: 1 / -1;
-
-                position: relative;
+            .EstruturaGeral .Logo .LogoPartOne{
+                background-color: #FFFFF0;
+                width: 18%;
+                height: 38%;
+                clip-path: url(#svgMaskOne);
             }
-                .EstruturaGeral .Logo .Logozinha .Pes{
-                    position: absolute;
-                    top: 50%;
-                    left: 50%;
-                    transform: translate(-50%, -50%);
-
-                    background: #e18825;
-                    width: 50%;
-                    height: 50%;
-                }
-                    .EstruturaGeral .Logo .Logozinha .Pes p{
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                    }
-            .EstruturaGeral .Logo p{
-                grid-column: 2;
-                grid-row: 1;
+            .EstruturaGeral .Logo .LogoPartTwo p{
                 font-size: max(23pt, 3.5vw);
                 font-weight: bold;
+                text-align: center;
             }
-            .EstruturaGeral .Logo h1{
-                grid-column: 2;
-                grid-row: 2;
+            .EstruturaGeral .Logo .LogoPartTwo h1{
                 font-size: max(7pt, 1.3vw);
                 letter-spacing: 2.5px;
+                text-align: center;
             }
         .EstruturaGeral button{
             background: none;
@@ -117,6 +100,9 @@ body{
 }
 [data-colorlogo].Colored h1{
     color: #e18825;
+}
+[data-colorlogo].Colored .LogoPartOne{
+    background: #360087;
 }
 
 
@@ -390,6 +376,10 @@ body{
 
 
             scroll-snap-align: start;
+
+            display: grid;
+            grid-template-columns: 100%;
+            grid-template-rows: 60% 40%;
         }
             .EstruturaGeral .PageThree .MyPhoto{
                 background-image: url(./IMG/me.jpg);
@@ -397,32 +387,34 @@ body{
                 background-position: center;
                 background-repeat: no-repeat;
                 width: 80%;
-                height: 50%;
+                height: 75%;
                 border-radius: 50px 0 0 10px;
 
-                position: absolute;
-                top: 40%;
-                right: 0;
-                transform: translateY(-50%);
+                align-self: end;
+                justify-self: end;
             }
             .EstruturaGeral .PageThree .AboutMe{
-                width: 80%;
-                height: auto;
-
-                position: absolute;
-                bottom: 8%;
-                left: 50%;
-                transform: translateX(-50%);
-                z-index: 23;
+                width: 100%;
+                height: 100%;
             }
-                .EstruturaGeral .PageThree .AboutMe li{
-                    margin-bottom: 5px;
+                .EstruturaGeral .PageThree .AboutMe ul{
+                    width: 95%;
+                    height: 90%;
+
+                    position: relative;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
                 }
-                .EstruturaGeral .PageThree .AboutMe p{
+                .EstruturaGeral .PageThree .AboutMe ul li{
+                    margin-bottom: 10px;
+                }
+                .EstruturaGeral .PageThree .AboutMe ul li p{
                     font-size: max(11pt, 2vw);
                     font-style: normal;
                     font-family: 'Roboto', sans-serif;
                     color: rgba(0, 0, 0, 0.8);
+                    text-align: center;
                 }
             .EstruturaGeral .PageThree .LinesAction{
                 position: absolute;
@@ -447,7 +439,7 @@ body{
                     font-size: max(6pt, 1vw);
                 }
                 .EstruturaGeral .PageThree .LinesAction #LineOne{
-                    bottom: 12%;
+                    bottom: 10%;
                     right: 0;
 
                     font-size: max(5pt, 1vw);
@@ -505,7 +497,8 @@ body{
         overflow-x: hidden;
     }
         .EstruturaGeral .Logo{
-            justify-content: flex-start;
+            justify-content: center;
+            align-items: flex-start;
             padding-left: 1vw;
         }
         .EstruturaGeral a#BotaoNavegacao{
@@ -635,46 +628,43 @@ body{
         .EstruturaGeral .PageThree{
             grid-column: 1;
             grid-row: 3;
+
+            grid-template-columns: 60% 40%;
+            grid-template-rows: 100%;
         }
         .EstruturaGeral .PageThree .MyPhoto{
+            grid-column: 2;
+            grid-row: 1;
+
+            justify-self: start;
+            align-self: center;
+
             background-image: url(./IMG/me.jpg);
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            width: 35%;
-            height: 75%;
+            width: 80%;
+            height: 70%;
             border-radius: 50px 10px 50px 10px;
-
-            position: absolute;
-            top: 50%;
-            right: 10%;
-            transform: translateY(-50%);
         }
         .EstruturaGeral .PageThree .AboutMe{
-            width: 40%;
-            height: auto;
+            grid-column: 1;
+            grid-row: 1;
 
-            position: absolute;
-            top: 50%;
-            left: 10%;
-            transform: translateX(0)
-            translateY(-50%);
+            width: 100%;
+            height: 100%;
         }
             .EstruturaGeral .PageThree .AboutMe ul{
-                position: absolute;
-                left: 0;
+                height: 50%;
+
+                position: relative;
+                left: 50%;
                 top: 50%;
-                transform: translateY(-50%);
+                transform: translateY(-50%, -50%);
             }
-                .EstruturaGeral .PageThree .AboutMe li{
+                .EstruturaGeral .PageThree .AboutMe ul li{
                     margin-bottom: 18px;
                 }
-            .EstruturaGeral .PageThree .AboutMe p{
-                text-align: left;
-                font-style: normal;
-                font-family: 'Roboto', sans-serif;
-                color: rgba(0, 0, 0, 0.8);
-            }
             .EstruturaGeral .PageThree .AssinDev{
                 position: absolute;
                 height: 10%;
@@ -689,10 +679,12 @@ body{
             .EstruturaGeral .PageThree .LinesAction #LineZero{
                 top: 18%;
                 font-size: 1.5vw;
+                bottom: unset;
             }
             .EstruturaGeral .PageThree .LinesAction #LineOne{
                 top: 23%;
                 color: #360087;
+                bottom: unset;
             }
             .EstruturaGeral .PageThree .LinesAction #LineTwo{
                 bottom: 20%;
